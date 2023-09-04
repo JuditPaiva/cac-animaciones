@@ -1,5 +1,11 @@
 h1{
     color: red;
+    /*transition: color 2s, font-size 3s;*/
+    transition-property: transform, color, font-size;
+    transition-duration:2s, 2s, 3s ;
+    /* transition-delay: 2s, 1s; */
+
+
 }
 /*hover es una seudoclase que se activa cuando pasamos por encima del elemento*/
 /*active aplica cuando clikeamos sobre el elemento*/
@@ -7,6 +13,7 @@ h1{
 h1:hover{
     color: aqua;/*propiedad-valor*/
     font-size: 3em;/*propiedad-valor*/
+    transform: rotate(90deg);
 }
 
 a{
@@ -18,6 +25,23 @@ a:hover{
     /*border-bottom: 5px solid green;*/
     text-decoration-line:underline ;
     text-decoration-thickness:5px ;
+}
+
+h2{
+animation-name: color;
+animation-duration: 4s;
+}
+
+/*@keyframes color {
+    from {color: red;}
+    to {color: yellow;}
+}*/
+
+@keyframes color {
+    0%{color :red}
+    25%{color: yellow;}
+    50%{color: blue;}
+    100%{color:green}
 }
 a:link{
     color: green;
@@ -70,7 +94,40 @@ section p:last-child{
     color: green;
 }*/
 
- section p:nth-child(3){ 
+ /*section p:nth-child(3){ 
+    color: fuchsia;{
+
+} */
+
+/* p:first-of-type::first-letter{
+    font-size: 3em;
     color: fuchsia;
+} */
+    
+/* p:first-of-type::first-line{
+    color: fuchsia;
+} */
+
+/* p::selection{
+    background-color: fuchsia;
+    color: beige;
+} */
+
+h1::before{
+    content: '- ';
+    color: aqua;
 }
 
+h1::after{
+    content: '*';
+    color: red;
+}
+
+p::after{
+    content: '...';
+}
+
+/* trancicion */
+
+
+/* animacion */
