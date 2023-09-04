@@ -1,0 +1,76 @@
+h1{
+    color: red;
+}
+/*hover es una seudoclase que se activa cuando pasamos por encima del elemento*/
+/*active aplica cuando clikeamos sobre el elemento*/
+
+h1:hover{
+    color: aqua;/*propiedad-valor*/
+    font-size: 3em;/*propiedad-valor*/
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    /*text-decoration:underline ;*/
+    /*border-bottom: 5px solid green;*/
+    text-decoration-line:underline ;
+    text-decoration-thickness:5px ;
+}
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: fuchsia;
+}
+
+a:active{
+    color: darkgoldenrod;
+}
+
+/*input[type="text"]{
+    -radius: 5px;
+    border: solid green;
+    outline: solid red;
+    outline-offset:5px ;
+} */
+
+input[type="text"]:focus{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 3px 3px 15px aqua;/*el 1, es cuantose separa del eje"x", el 2 cuanto del "y" y el t3 cuanto de difuminado*/
+    padding: 5px;
+}
+/*otras pseudoclass de formulario 
+:focus aplica estilo cuando se hace foco sobe el elemento
+:checked aplica estilos cuando se selecciona la casill*/
+
+input[type="checkbox"]:checked{
+   
+    background-color: red;
+    box-shadow: 1px 1px 3px red;/*el 1, es cuantose separa del eje"x", el 2 cuanto del "y" y el t3 cuanto de difuminado*/
+
+}
+
+/*pseudoclases a elementos hijos de distinto tipo
+:first-child  :last-child (se utiliza para representar al primer o ultimo elemento
+dentro de un grupo de elementos hermanos
+
+:nth-child() coincide con el elemento segun su posicion entro del grupo ed hermenos*/
+
+/*section p:first-child{
+    color: red;
+}
+
+section p:last-child{
+    color: green;
+}*/
+
+ section p:nth-child(3){ 
+    color: fuchsia;
+}
+
